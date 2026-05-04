@@ -5,28 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/calculadora.js"></script>
 </head>
 <body class="px-4 pt-4">
     <div>
-        <input type="text" class="border w-full h-16 px-4 text-end"/>
+        <input type="text" id="texto" class="border w-full h-16 px-4 text-end"/>
     </div>
     <div class="grid grid-cols-4 pt-4 gap-1 px-4">
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">1</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">2</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">3</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">+</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">4</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">5</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">6</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">-</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">7</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">8</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">9</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">*</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">0</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">C</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">=</button>
-        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" type="button">/</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300" 
+        onclick="numeroOnclick('1')" type="button">1</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('2')" type="button">2</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('3')" type="button">3</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="sumarOnClick()" type="button">+</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('4')" type="button">4</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('5')" type="button">5</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('6')" type="button">6</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('')" type="button">-</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('7')" type="button">7</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('8')" type="button">8</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('9')" type="button">9</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('')" type="button">*</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('0')" type="button">0</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('')" type="button">C</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="igualOnClick()" type="button">=</button>
+        <button class="border bg-gray-100 rounded-md border-gray-300 h-16 text-2xl hover:bg-gray-300"
+        onclick="numeroOnclick('')" type="button">/</button>
     </div>
 </body>
 </html>
