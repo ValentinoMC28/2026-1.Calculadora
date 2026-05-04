@@ -9,28 +9,40 @@ function numeroOnclick(numero){
     cajaTexto.value = numeroTexto
 }
 
-function sumarOnClick(){ 
-    numeroGuardado = numeroGuardado + parseInt(numeroTexto) 
-    numeroTexto = "" 
+function sumarOnClick(){
+    if (numeroGuardado === 0 || numeroGuardado === ""){
+        numeroGuardado = parseInt(numeroTexto)
+        numeroTexto = ""
+    }else{
+        numeroTexto = ""
+    }
     const cajaTexto = document.getElementById("texto") 
     cajaTexto.value = "" 
     operacionRealizada = "+" 
 }
 
 function restarOnClick(){
-    numeroGuardado = numeroGuardado - parseInt(numeroTexto)
-    numeroTexto = ""
-    const cajaTexto = document.getElementById("texto")
-    cajaTexto.value = ""
-    operacionRealizada = "-"
+    if (numeroGuardado === 0 || numeroGuardado === ""){
+        numeroGuardado = parseInt(numeroTexto)
+        numeroTexto = ""
+    }else {
+        numeroTexto = ""
+    }
+    const cajaTexto = document.getElementById("texto") 
+    cajaTexto.value = "" 
+    operacionRealizada = "-" 
 }
 
 function multiOnClick(){
-    numeroGuardado = numeroTexto
-    numeroTexto = ""
-    const cajaTexto = document.getElementById("texto")
-    cajaTexto.value = ""
-    operacionRealizada = "*"
+    if (numeroGuardado === 0 || numeroGuardado === ""){
+        numeroGuardado = parseInt(numeroTexto)
+        numeroTexto = ""
+    }else {
+        numeroTexto = ""
+    }
+    const cajaTexto = document.getElementById("texto") 
+    cajaTexto.value = "" 
+    operacionRealizada = "*" 
 }
 
 function COnClick(){
@@ -46,16 +58,19 @@ function igualOnClick(){
     if (operacionRealizada === "+"){ 
         const resultado = parseInt(numeroGuardado) + parseInt(numeroTexto) 
         cajaTexto.value = resultado 
+        numeroGuardado = resultado 
     } 
     if (operacionRealizada === "-"){ 
         const resultado = parseInt(numeroGuardado) - parseInt(numeroTexto) 
         cajaTexto.value = resultado 
+        numeroGuardado = resultado 
     } 
     if (operacionRealizada === "*"){ 
         const resultado = parseInt(numeroGuardado) * parseInt(numeroTexto) 
         cajaTexto.value = resultado 
+        numeroGuardado = resultado 
     } 
-    numeroGuardado = resultado 
+    console.log(numeroGuardado)
     numeroTexto = "" 
     operacionRealizada = "" 
 }
