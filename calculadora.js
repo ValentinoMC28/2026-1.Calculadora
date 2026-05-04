@@ -22,15 +22,12 @@ function sumarOnClick(){
 }
 
 function restarOnClick(){
-    if (numeroGuardado === 0 || numeroGuardado === ""){
-        numeroGuardado = parseInt(numeroTexto)
-        numeroTexto = ""
-    }else {
-        numeroTexto = ""
+    if (numeroTexto !== "") {
+        numeroGuardado = parseInt(numeroTexto);
     }
-    const cajaTexto = document.getElementById("texto") 
-    cajaTexto.value = "" 
-    operacionRealizada = "-" 
+    numeroTexto = "";
+    document.getElementById("texto").value = "";
+    operacionRealizada = "-";
 }
 
 function multiOnClick(){
