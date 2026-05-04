@@ -67,6 +67,9 @@ function igualOnClick(){
         cajaTexto.value = resultado 
         numeroGuardado = resultado 
     } 
+    if (operacionRealizada === "/"){
+        
+    }
     console.log(numeroGuardado)
     numeroTexto = "" 
     operacionRealizada = "" 
