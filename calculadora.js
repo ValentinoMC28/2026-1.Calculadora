@@ -10,12 +10,10 @@ function numeroOnclick(numero){
 }
 
 function sumarOnClick(){
-    if (numeroGuardado === 0 || numeroGuardado === ""){
-        numeroGuardado = parseInt(numeroTexto)
-        numeroTexto = ""
-    }else{
-        numeroTexto = ""
+    if (numeroTexto !== "") {
+        numeroGuardado = parseInt(numeroTexto);
     }
+    numeroTexto = "";
     const cajaTexto = document.getElementById("texto") 
     cajaTexto.value = "" 
     operacionRealizada = "+" 
@@ -31,15 +29,23 @@ function restarOnClick(){
 }
 
 function multiOnClick(){
-    if (numeroGuardado === 0 || numeroGuardado === ""){
-        numeroGuardado = parseInt(numeroTexto)
-        numeroTexto = ""
-    }else {
-        numeroTexto = ""
-    }
+    if (numeroTexto !== "") {
+        numeroGuardado = parseInt(numeroTexto);
+    }  
+    numeroTexto = ""
     const cajaTexto = document.getElementById("texto") 
     cajaTexto.value = "" 
     operacionRealizada = "*" 
+}
+
+function diviOnClick(){
+    if (numeroTexto !== "") {
+        numeroGuardado = parseInt(numeroTexto);
+    }
+    numeroTexto = "";
+    const cajaTexto = document.getElementById("texto") 
+    cajaTexto.value = "" 
+    operacionRealizada = "/" 
 }
 
 function COnClick(){
@@ -68,7 +74,13 @@ function igualOnClick(){
         numeroGuardado = resultado 
     } 
     if (operacionRealizada === "/"){
-        
+        if (parseInt(numeroTexto) === 0){
+            alert("ERROR: División entre 0.")
+        }else{
+            const resultado = parseInt(numeroGuardado) / parseInt(numeroTexto)
+            cajaTexto.value = resultado 
+            numeroGuardado = resultado
+        }
     }
     console.log(numeroGuardado)
     numeroTexto = "" 
